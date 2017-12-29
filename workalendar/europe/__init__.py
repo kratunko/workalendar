@@ -18,6 +18,7 @@ from .italy import Italy
 from .latvia import Latvia
 from .luxembourg import Luxembourg
 from .malta import Malta
+from .moldova import Moldova
 from .netherlands import Netherlands
 from .norway import Norway
 from .poland import Poland
@@ -61,6 +62,7 @@ __all__ = (
     'Latvia',
     'Luxembourg',
     'Malta',
+    'Moldova',
     'Netherlands',
     'Norway',
     'Poland',
