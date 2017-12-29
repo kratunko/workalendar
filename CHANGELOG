@@ -11,6 +11,10 @@ master (unreleased)
 - Update ACT holidays( #251)
 - First step iteration on the "global registry" feature. European countries are now part of a registry loaded in the ``workalenda.registry`` module. Please use with care at the moment (#248).
 - Moved from `novafloss` to the `peopledoc` organization, the core People Doc Inc. organization (#255)
+- Adding moldova.py and updating the Europe —> __init__.py;
+- Adding New Year as a holiday for Czech Republic;
+- Adding renaming Formation of the Theotokos to St. Mary’s Day on 15th Aug in ro
+mania.py.
 
 
 2.3.1 (2017-07-27)
