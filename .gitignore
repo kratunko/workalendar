@@ -6,3 +6,4 @@ build/
 .tox/
 # py.test cache
 .cache/
+.idea/

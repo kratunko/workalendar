@@ -12,6 +12,7 @@ class CzechRepublic(WesternCalendar, ChristianMixin):
     include_good_friday = True
 
     FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
+        (1, 1, "New Year"),
         (1, 1, "Restoration Day of the Independent Czech State"),
         (5, 1, "Labour Day"),
         (5, 8, "Liberation Day"),

@@ -5,28 +5,37 @@ from workalendar.core import WesternCalendar, OrthodoxMixin
 from workalendar.registry import iso_register
 
 
-@iso_register('RO')
-class Romania(WesternCalendar, OrthodoxMixin):
-    name = 'Romania'
+@iso_register('MD')
+class Moldova(OrthodoxMixin, WesternCalendar):
+    name = 'Moldova'
 
     FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
-        (1, 2, "Day After New Years"),
-        (1, 24, "Union Day"),
-        (5, 1, "Labour Day"),
-        (8, 15, "St Mary' Day"),
-        (11, 30, "St. Andrew's Day"),
-        (12, 1, "National Day/Great Union"),
+        (1, 2, "New Year - 2nd day"),
+        (1, 7, "Orthodox Christmas Day"),
+        (1, 8, "Orthodox Christmas Day holiday"),
+        (3, 8, "International Women's Day"),
+        (4, 16, "Orthodox Easter Sunday"),
+        (4, 17, "Orthodox Easter Monday"),
+        (4, 24, "Memorial Day/Parents' Day"),
+        (5, 1, "International Day of Solidarity of Workers"),
+        (5, 8, "Victory Day (Bridge Holiday)"),
+        (5, 9, "Victory Day"),
+        (6, 2, "Chrildren's Day Extra Holiday"),
+        (8, 27, "Independence Day"),
+        (8, 28, "Independence Day Holiday"),
+        (8, 31, "Language Day"),
+        (9, 1, "Language Day Extra Holiday"),
     )
 
-    include_good_friday = True
-    include_easter_sunday = True
-    include_easter_monday = True
-    include_whit_sunday = True
+    include_good_friday = False
+    include_easter_sunday = False
+    include_easter_monday = False
+    include_whit_sunday = False
     whit_sunday_label = 'Pentecost'
-    include_whit_monday = True
+    include_whit_monday = False
 
     include_christmas = True
-    include_boxing_day = True
+    include_boxing_day = False
     boxing_day_label = 'Christmas Day'
 
     def get_childrens_day(self, year):
@@ -48,7 +57,7 @@ class Romania(WesternCalendar, OrthodoxMixin):
         return days
 
     def get_variable_days(self, year):
-        days = super(Romania, self).get_variable_days(year)
+        days = super(Moldova, self).get_variable_days(year)
         days.extend(self.get_childrens_day(year))
         days.extend(self.get_liberation_day(year))
         return days
